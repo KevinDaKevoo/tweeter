@@ -1,0 +1,24 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2634ac;
+  background-image: url("../images/diagonal-waves.png");
+  overflow: hidden;
+  z-index: -1;
+  color:lightsteelblue;
+  margin-top: 120px;
+  justify-content: space-around;
+}
+
+
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    height: 50vh;
+    width: 80%;
+    margin-left: 20px;
+  }
+} 

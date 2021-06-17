@@ -6,24 +6,61 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/2fff5f5ee5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+  </head>
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <a class="hover-2"><i class="fab fa-twitter"></i><span class="a">Tweeter</a></span>
+        <span class="b">Write a new Tweet
+          <a class="hover-2" id="down-button"><i class="fas fa-angle-double-down" style="color: red"></i></a>
+        </span>
     </nav>
-
+    <header>
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2>Kevin Yu</h2>
+        </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+        <section class="new-tweet" id="new-tweet">
+          <!-- Error message pop ups -->
+          <p class="error-message" id="error-message-nothing"><i class="fas fa-exclamation-triangle"></i>Please enter something before clicking Tweet.<i class="fas fa-exclamation-triangle"></i></p>
+          <p class="error-message" id="error-message-over"><i class="fas fa-exclamation-triangle"></i>Please reduce length of Tweet.<i class="fas fa-exclamation-triangle"></i></p>
+            <!-- Page-specific (main) content here continued...-->
+            <form id="tweet-form">
+                <label for="tweet-text">What are you humming about?</label>
+                <textarea name="text" id="tweet-text" placeholder="..."></textarea>
+              <div>
+                <button class="tweetIt" type="submit"><i class="fab fa-twitter"></i>Tweet</button>
+                <output name="counter" id="maximum" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+        </section>
+        <section class="tweets-container">
+            </section>
+            <span id="back-top-button"><a class="hover-2" href="#top" ><i class="fas fa-angle-double-up"></i></a></span>
+    </main>
   </body>
 </html>
+

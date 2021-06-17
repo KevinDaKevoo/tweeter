@@ -3,23 +3,173 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
-
+* {
+  font-family: 'Open Sans', sans-serif;
+}
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+  /* Step 2: Reference Individual Icons */
+.login::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f007";
+}
+  /* Note: Make sure to include the correct weight and Unicode value for the icon */
+.tps::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f1ea";
+}
+
+main {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.userInfo {
+  display:flex;
+  background-color: #f4f1ec;
+  background-image: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  height: 100px;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.userInfo div {
+  display:flex; 
+  align-items: center;
+}
+
+.tweetedText {
+  display: flex;
+  border-bottom: 2px solid black;
+  margin: 20px;
+}
+
+article footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+.timeago {
+  padding-left:0;
+}
+i:hover {color: lightsteelblue}
+
+article:hover{ 
+  box-shadow:10px 10px lightsteelblue
+}
+
+.characterError {
+  color: red;
+  font-weight: bolder;
+}
+
+
+a, a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.hover-2 {
+  padding: 10px;
+}
+
+.hover-2:before, .hover-2:after {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: lightsteelblue;
+}
+
+.hover-2:before {
+  border-width: 2px 0 2px 0;
+  transform: scaleX(0);
+}
+
+.hover-2:after {
+  border-width: 0 2px 0 2px;
+  transform: scaleY(0);
+}
+
+.hover-2:hover:before, .hover-2:hover:after {
+  transform: scale(1, 1);
+}
+
+main #back-top-button {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20vh;
+    
+  }
+  main {
+    padding: 5vh;
+  }
+  .userInfo {
+    display: flex;
+    padding: 0;
+    width: 90%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+}
+

@@ -1,0 +1,41 @@
+nav {
+    height: 120px;
+    width: 100%;
+    color: #FFFF;
+    background-color: #4056A1;
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+    display:flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.a {
+    display: flex;
+    text-align:end;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Bungee', cursive;
+}
+.b {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 24px;
+
+}
