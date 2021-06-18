@@ -5,6 +5,8 @@
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
 ### Screenshots
+!["Screenshot of Tweeter Page"](https://github.com/KevinDaKevoo/tweeter/blob/master/Docs/Tweeter.png)
+!["Screenshot of Smaller Tweeter Page"](https://github.com/KevinDaKevoo/tweeter/blob/master/Docs/Tweeter-Smaller-Browser.png)
 
 ### Getting Started
 
